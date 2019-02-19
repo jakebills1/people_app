@@ -1,0 +1,10 @@
+<h1><%= @person.name %></h1>
+<h2>Here is everything we have on <%=@person.name%></h2>
+<ul>
+    <li>Their hair color is <%=@person.hair_color.downcase%></li>
+    <li>Their eye color is <%=@person.eye_color.downcase%></li>
+    <li>They are <%=@person.age%> years old</li>
+    <li>Their gender is <%=@person.gender.downcase%></li>
+    <li>They are <%= @person.alive == true ? "alive" : "dead" %></li>
+</ul>
+<%= link_to 'Back', people_path %>
