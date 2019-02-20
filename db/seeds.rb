@@ -6,11 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+eye_colors = ["brown", "blue", "green", "hazel"]
+hair_colors = ["brown", "blonde", "red", "black", "gray"]
+genders = ["male", "female", "other"]
 
-Dog.create!([
-    {name: "Rusty", age: 12, breed: "Golden"},
-    {name: "Larry", age: 2, breed: "German Shepard"},
-    {name: "Lefty", age: 6, breed: "Wiener Dog"},
-    {name: "Righty", age: 7, breed: "Weiner Dog"},
-    {name: "Poncho", age: 15, breed: "Basset Hound"}
-])
+10.times do 
+    Person.create(name: Faker::Name.name, eye_color: eye_colors.sample, hair_color: hair_colors.sample, age: rand(50), gender: genders.sample, alive: rand(1) == 1 ? true : false )
+end
+
+10.times do
+    Dog.create(name: Faker::Creature::Dog.name, breed: Faker::Creature::Dog.breed, age: rand(20))
+end
