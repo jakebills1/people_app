@@ -2,5 +2,9 @@
  <% @dogs.each do |dog|%>
     <h3> <%=dog.name%> </h3>
     <%= link_to 'View Dog', dog_path(dog) %>
+    <%= link_to 'Edit', edit_dog_path(dog) %>
+    <%= link_to 'Remove from Directory', dog, method: :delete %>
 <%end%>
+
+<%= link_to 'Add a new dog', new_dog_path %>
     
