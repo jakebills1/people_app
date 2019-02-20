@@ -1,8 +1,8 @@
 <h1>All People</h1>
 <h2>Here are all the people in the database</h2>
 
-<% @people.each_with_index do |person, index|%>
-    <h3><%= person.name%></h3>
+<% @people.each do |person|%>
+    <h3><%=person.name%></h3>
     <%= link_to 'View Info', person_path(person) %>
     <%= link_to 'Edit', edit_person_path(person) %>
     <%= link_to 'Destroy Person', person, method: :delete %>

@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+names = []
+hair_colors = ['brown', 'black', 'red', 'blonde', 'gray']
+eye_colors = ['blue', 'green', 'brown', 'hazel']
+genders = ['male', 'female', 'other']
+alive = [true, false]
