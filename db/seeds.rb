@@ -7,8 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-names = []
-hair_colors = ['brown', 'black', 'red', 'blonde', 'gray']
-eye_colors = ['blue', 'green', 'brown', 'hazel']
-genders = ['male', 'female', 'other']
-alive = [true, false]
+Dog.create!([
+    {name: "Rusty", age: 12, breed: "Golden"},
+    {name: "Larry", age: 2, breed: "German Shepard"},
+    {name: "Lefty", age: 6, breed: "Wiener Dog"},
+    {name: "Righty", age: 7, breed: "Weiner Dog"},
+    {name: "Poncho", age: 15, breed: "Basset Hound"}
+])
